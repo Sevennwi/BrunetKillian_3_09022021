@@ -1,0 +1,182 @@
+$primary-color: #f2f2f2;
+$second-color: #9356DC;
+$third-color: #FF79DA;
+
+/* Police */
+
+
+@mixin Police {
+    font-family: Shrikhand, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+
+/* En tête */
+
+header {
+    width: 100%;
+    text-align: center;
+    
+    h1 {
+        width: 100%;
+        background-color: white;
+        @include Police
+    }
+    .location {
+        background-color: rgb(224, 224, 224);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 1px 5px rgb(177, 177, 177);
+        font-weight: bold;
+        &_logo {
+            margin-right: 15px;
+        }
+    }
+
+    .reserver {
+        background-color: $primary-color;
+        padding: 10px 26px 40px;
+
+        h2 {
+            font-size: 1.5em;
+            padding: 0px 41px;
+        }
+
+        &_button {
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient($third-color, $second-color);
+            width: 200px;
+            height: 40px;
+            color: white;
+            box-shadow: -3px 3px 5px lightgray;
+        }
+    }
+}
+
+/* Section */ 
+
+section {
+    text-align: center;
+
+    h2 {
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    ul {
+        list-style-type: none;
+        counter-reset: number;
+
+        li::before {
+            counter-increment: number;
+            content: counter(number)"\a0";
+            background-color: $second-color;
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 20px;
+            height: 20px;
+            color: white;
+            font-weight: normal;
+          }
+
+        li {
+            background-color: $primary-color;
+            margin: 20px 0px;
+            width: 95%;
+            height: 60px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: -3px 3px 5px lightgray;
+            span {
+                margin-right: 25px;
+                color: gray;
+            }
+        }
+    }
+
+    .cards {
+        background-color: $primary-color;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 50px;
+        
+        h2 {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 20%; 
+        }
+        
+        &_card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            background-color: white;
+            box-shadow: -3px 3px 5px lightgray;
+            margin: 10px 0px;
+            width: 350px;
+            height: 285px;
+            border-radius: 20px;
+            &_img {
+                width: 350px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+            }
+        }
+
+        h3, p {
+            text-align: left;
+            color: black;
+            margin-left: 20px;
+            margin-bottom: -5px;
+        }
+
+        span {
+            position: relative;
+            left: 38%;
+            bottom: 40px;
+            font-size: 1.5em;
+            color: grey;
+        }
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: rgba(29, 29, 29, 0.781);
+    color: white;
+    padding: 1px 0px;
+    
+    h2{
+        text-align: left;
+        margin-left: 10%; 
+        @include Police
+    }
+    
+    p {
+        text-align: left;
+        margin-left: 10%; 
+    }
+
+    p span {
+        margin-right: 15px;
+        #rotate {
+            transform: rotate(-40deg);
+            width: 13.5px;
+        }
+    }
+}

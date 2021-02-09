@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* Police */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/* En tête */
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  width: 100%;
+  background-color: white;
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+}
+
+header .location {
+  background-color: #e0e0e0;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 0px 1px 5px #b1b1b1;
+          box-shadow: inset 0px 1px 5px #b1b1b1;
+  font-weight: bold;
+}
+
+header .location_logo {
+  margin-right: 15px;
+}
+
+header .reserver {
+  background-color: #f2f2f2;
+  padding: 10px 26px 40px;
+}
+
+header .reserver h2 {
+  font-size: 1.5em;
+  padding: 0px 41px;
+}
+
+header .reserver_button {
+  border: none;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 200px;
+  height: 40px;
+  color: white;
+  -webkit-box-shadow: -3px 3px 5px lightgray;
+          box-shadow: -3px 3px 5px lightgray;
+}
+
+/* Section */
+section {
+  text-align: center;
+}
+
+section h2 {
+  text-align: left;
+  margin-left: 10%;
+}
+
+section ul {
+  list-style-type: none;
+  counter-reset: number;
+}
+
+section ul li::before {
+  counter-increment: number;
+  content: counter(number) " ";
+  background-color: #9356DC;
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  font-weight: normal;
+}
+
+section ul li {
+  background-color: #f2f2f2;
+  margin: 20px 0px;
+  width: 95%;
+  height: 60px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  -webkit-box-shadow: -3px 3px 5px lightgray;
+          box-shadow: -3px 3px 5px lightgray;
+}
+
+section ul li span {
+  margin-right: 25px;
+  color: gray;
+}
+
+section .cards {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+
+section .cards h2 {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-left: 20%;
+}
+
+section .cards_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  background-color: white;
+  -webkit-box-shadow: -3px 3px 5px lightgray;
+          box-shadow: -3px 3px 5px lightgray;
+  margin: 10px 0px;
+  width: 350px;
+  height: 285px;
+  border-radius: 20px;
+}
+
+section .cards_card_img {
+  width: 350px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+section .cards h3, section .cards p {
+  text-align: left;
+  color: black;
+  margin-left: 20px;
+  margin-bottom: -5px;
+}
+
+section .cards span {
+  position: relative;
+  left: 38%;
+  bottom: 40px;
+  font-size: 1.5em;
+  color: grey;
+}
+
+/* footer */
+footer {
+  background-color: rgba(29, 29, 29, 0.781);
+  color: white;
+  padding: 1px 0px;
+}
+
+footer h2 {
+  text-align: left;
+  margin-left: 10%;
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+}
+
+footer p {
+  text-align: left;
+  margin-left: 10%;
+}
+
+footer p span {
+  margin-right: 15px;
+}
+
+footer p span #rotate {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  width: 13.5px;
+}
+/*# sourceMappingURL=OhMyFood.css.map */
