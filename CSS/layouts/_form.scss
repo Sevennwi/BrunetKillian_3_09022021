@@ -1,0 +1,26 @@
+/* footer */
+
+footer {
+    background-color: rgba(29, 29, 29, 0.781);
+    color: white;
+    padding: 1px 0px;
+    
+    h2{
+        text-align: left;
+        margin-left: 10%; 
+        @include Police
+    }
+    
+    p {
+        text-align: left;
+        margin-left: 10%; 
+    }
+
+    p span {
+        margin-right: 15px;
+        #rotate {
+            transform: rotate(-40deg);
+            width: 13.5px;
+        }
+    }
+}

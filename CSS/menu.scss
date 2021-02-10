@@ -1,0 +1,107 @@
+@import "utils/variables";
+
+h1 {
+    @include Police;
+    text-align: center;
+    height: 30px;
+    
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    span {
+        position: relative;
+        right: 20%;
+    }
+}
+
+/*Section*/ 
+
+section {
+
+    img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: flex;
+        border-radius: 0px 0px -40px -40px;
+        position: relative;
+        z-index: 1;
+    }
+
+
+    .cards {
+        background-color: $primary-color;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -40px;
+        padding: 0px 0px 40px;
+        border-radius: 40px 40px 0px 0px;
+        position: relative;
+        z-index: 2;
+
+        h2 {
+            @include Police;
+            
+            span {
+                margin-left: 40px;
+            }
+        }
+
+        h3 {
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-left: 50px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        h3:before {
+            content : "";
+            position: absolute;
+            height  : 25px;
+            width   : 12%;
+            border-bottom: 4px solid $fourth-color;
+          }
+
+        &_card {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            background-color: white;
+            border-radius: 20px;
+            margin: 10px 0px;
+            
+            h4, p {
+                margin-left: 20px;
+            }
+
+            span {
+                float: right;
+                margin-right: 20px;
+                font-weight: bold;
+            }
+        }
+
+        &_button {
+            border: none;
+            border-radius: 30px;
+            margin: 20px 0px 0px;
+            background: linear-gradient($third-color, $second-color);
+            width: 180px;
+            height: 40px;
+            color: white;
+            box-shadow: -3px 3px 5px lightgray;
+        }
+
+    }
+}
+
+
+@import "layouts/form";
