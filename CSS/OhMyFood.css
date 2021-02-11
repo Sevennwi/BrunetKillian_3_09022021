@@ -59,6 +59,28 @@ header .reserver_button {
   color: white;
   -webkit-box-shadow: -3px 3px 5px lightgray;
           box-shadow: -3px 3px 5px lightgray;
+  position: relative;
+  z-index: 1;
+}
+
+header .reserver_button:hover::after {
+  opacity: 1;
+}
+
+header .reserver_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background: linear-gradient(#ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 /* Section */
@@ -71,9 +93,30 @@ section h2 {
   margin-left: 10%;
 }
 
+@media all and (min-width: 1100px) {
+  section h2 {
+    text-align: center;
+    margin: 20px 0px;
+  }
+}
+
 section ul {
   list-style-type: none;
   counter-reset: number;
+}
+
+@media all and (min-width: 1100px) {
+  section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px 0px 40px;
+  }
 }
 
 section ul li::before {
@@ -108,6 +151,20 @@ section ul li {
           box-shadow: -3px 3px 5px lightgray;
 }
 
+@media all and (min-width: 1100px) {
+  section ul li {
+    margin: 0px 20px;
+  }
+}
+
+section ul li:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+
+section ul li:hover span {
+  color: #9356DC;
+}
+
 section ul li span {
   margin-right: 25px;
   color: gray;
@@ -128,11 +185,35 @@ section .cards {
   padding-bottom: 50px;
 }
 
+@media all and (min-width: 1100px) {
+  section .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 section .cards h2 {
   display: block;
   width: 100%;
   text-align: left;
   margin-left: 20%;
+}
+
+@media all and (min-width: 1100px) {
+  section .cards h2 {
+    text-align: center;
+    margin: 20px 0px 0px;
+  }
 }
 
 section .cards_card {
@@ -147,10 +228,16 @@ section .cards_card {
   background-color: white;
   -webkit-box-shadow: -3px 3px 5px lightgray;
           box-shadow: -3px 3px 5px lightgray;
-  margin: 10px 0px;
+  margin: 15px 0px;
   width: 350px;
   height: 285px;
   border-radius: 20px;
+}
+
+@media all and (min-width: 1100px) {
+  section .cards_card {
+    margin: 40px 80px;
+  }
 }
 
 section .cards_card_img {
@@ -176,11 +263,52 @@ section .cards span {
   color: grey;
 }
 
+section .cards span i:hover {
+  -webkit-animation: heart 1s infinite;
+          animation: heart 1s infinite;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
+  }
+}
+
+@keyframes heart {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(#9356DC, #FF79DA);
+  }
+}
+
+/* media queries */
 /* footer */
 footer {
   background-color: rgba(29, 29, 29, 0.781);
   color: white;
   padding: 1px 0px;
+}
+
+@media all and (min-width: 1100px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer h2 {
@@ -189,9 +317,21 @@ footer h2 {
   font-family: Shrikhand, Arial, Helvetica, sans-serif;
 }
 
+@media all and (min-width: 1100px) {
+  footer h2 {
+    margin: 0;
+  }
+}
+
 footer p {
   text-align: left;
   margin-left: 10%;
+}
+
+@media all and (min-width: 1100px) {
+  footer p {
+    margin: 10px 0px;
+  }
 }
 
 footer p span {

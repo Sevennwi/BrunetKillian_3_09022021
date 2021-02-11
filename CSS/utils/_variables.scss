@@ -3,6 +3,8 @@ $second-color: #9356DC;
 $third-color: #FF79DA;
 $fourth-color: #99E2D0;
 
+$delay:200ms;
+
 /* Police */
 
 
@@ -14,4 +16,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+
+@mixin ordi {
+    @media all and (min-width: 1100px) {
+        @content;
+    }
 }

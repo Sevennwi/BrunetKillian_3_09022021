@@ -42,6 +42,26 @@ header {
             height: 40px;
             color: white;
             box-shadow: -3px 3px 5px lightgray;
+            position: relative;
+            z-index: 1;
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 30px;
+                background: linear-gradient(lighten($third-color, 5), lighten($second-color, 5));
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 250ms;
+            }
         }
     }
 }
@@ -54,11 +74,22 @@ section {
     h2 {
         text-align: left;
         margin-left: 10%;
+        @include ordi {
+            text-align: center;
+            margin: 20px 0px;
+        }
     }
 
     ul {
         list-style-type: none;
         counter-reset: number;
+
+        @include ordi {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0px 40px;
+        }
 
         li::before {
             counter-increment: number;
@@ -83,6 +114,17 @@ section {
             align-items: center;
             font-weight: bold;
             box-shadow: -3px 3px 5px lightgray;
+
+            @include ordi {
+                margin: 0px 20px;
+            }
+
+            &:hover {
+                background-color: rgba($second-color,0.2);
+                span {         
+                        color: $second-color;
+                }
+            }
             span {
                 margin-right: 25px;
                 color: gray;
@@ -96,12 +138,24 @@ section {
         align-items: center;
         flex-direction: column;
         padding-bottom: 50px;
+
+        @include ordi {
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
         
         h2 {
         display: block;
         width: 100%;
         text-align: left;
         margin-left: 20%; 
+
+        @include ordi {
+            text-align: center;
+            margin: 20px 0px 0px;
+            }
         }
         
         &_card {
@@ -110,10 +164,14 @@ section {
             text-decoration: none;
             background-color: white;
             box-shadow: -3px 3px 5px lightgray;
-            margin: 10px 0px;
+            margin: 15px 0px;
             width: 350px;
             height: 285px;
             border-radius: 20px;
+            @include ordi {
+                margin: 40px 80px;
+            }
+
             &_img {
                 width: 350px;
                 height: 200px;
@@ -135,8 +193,24 @@ section {
             bottom: 40px;
             font-size: 1.5em;
             color: grey;
+            i:hover{
+                animation: heart 1s infinite;
+            }
         }
     }
 }
+
+
+@keyframes heart {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background: linear-gradient($second-color, $third-color);
+    }
+}
+
+/* media queries */
+
 
 @import "layouts/form";

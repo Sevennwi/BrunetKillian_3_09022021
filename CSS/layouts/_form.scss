@@ -4,16 +4,30 @@ footer {
     background-color: rgba(29, 29, 29, 0.781);
     color: white;
     padding: 1px 0px;
+
+    @include ordi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     h2{
         text-align: left;
         margin-left: 10%; 
-        @include Police
+        @include ordi {
+            margin: 0;
+        }
+
+        @include Police 
     }
     
     p {
         text-align: left;
         margin-left: 10%; 
+
+        @include ordi {
+            margin: 10px 0px;
+        }
     }
 
     p span {
