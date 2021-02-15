@@ -264,27 +264,25 @@ section .cards span {
 }
 
 section .cards span i:hover {
-  -webkit-animation: heart 1s infinite;
-          animation: heart 1s infinite;
+  -webkit-animation: heart 1s both;
+          animation: heart 1s both;
 }
 
 @-webkit-keyframes heart {
   0% {
-    background-color: white;
+    color: grey;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(#9356DC, #FF79DA);
+    color: #9356DC;
   }
 }
 
 @keyframes heart {
   0% {
-    background-color: white;
+    color: grey;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(#9356DC, #FF79DA);
+    color: #9356DC;
   }
 }
 

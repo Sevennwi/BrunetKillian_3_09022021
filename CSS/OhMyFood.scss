@@ -194,7 +194,7 @@ section {
             font-size: 1.5em;
             color: grey;
             i:hover{
-                animation: heart 1s infinite;
+                animation: heart 1s both;
             }
         }
     }
@@ -203,10 +203,10 @@ section {
 
 @keyframes heart {
     0% {
-        background-color: white;
+        color: grey;
     }
     100% {
-        background: linear-gradient($second-color, $third-color);
+        color: $second-color;
     }
 }
 

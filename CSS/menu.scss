@@ -70,35 +70,69 @@ section {
           }
 
         &_card {
-            flex-direction: column;
+            display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
             width: 90%;
+            height: 90px;
             background-color: white;
             border-radius: 20px;
             margin: 10px 0px;
-            animation: menu-anim 600ms both;
+            animation: menu-anim 400ms both;
             animation-timing-function: ease-in-out;
 
             &:nth-child(3) { animation-delay: 0.6s }
             &:nth-child(4) { animation-delay: 0.8s }
             &:nth-child(5) { animation-delay: 1s }
-            &:nth-child(7) { animation-delay: 0.6s }
-            &:nth-child(8) { animation-delay: 0.8s }
-            &:nth-child(9) { animation-delay: 1s }
-            &:nth-child(11) { animation-delay: 0.6s }
-            &:nth-child(12) { animation-delay: 0.8s }
-            &:nth-child(13) { animation-delay: 1s }
+            &:nth-child(7) { animation-delay: 1.4s }
+            &:nth-child(8) { animation-delay: 1.6s }
+            &:nth-child(9) { animation-delay: 1.8s }
+            &:nth-child(11) { animation-delay: 2.2s }
+            &:nth-child(12) { animation-delay: 2.4s }
+            &:nth-child(13) { animation-delay: 2.6s }
             
             h4, p {
                 margin-left: 20px;
             }
 
-            span {
-                float: right;
-                margin-right: 20px;
-                font-weight: bold;
+            &_prix {
+                display: flex;
+                margin-top: -20px;
+                justify-content: space-between;
+                width: 170%;
+
+                &_p {
+                    font-weight: bold;
+                }
             }
+
+            &_icon {
+                display: flex;
+                color: white;
+                background-color: $fourth-color;
+                border-radius: 0px 20px 20px 0px;
+                margin: 0px -20px 0px -20px;
+                font-size: 1.2em;
+                width: 100px;
+                height: 90px;
+
+                &_span {
+                    display: block;
+                    position: relative;
+                    top: 85%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            &:hover {
+                transform-origin: 50% 0%;
+                background-color: $fourth-color;
+                animation: check-anim 400ms both;
+                animation-timing-function: ease-in-out;
+            }
+            }
+
+
         }
 
         &_button {
@@ -123,6 +157,15 @@ section {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes check-anim {
+    0% {
+    	transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
     }
 }
 
