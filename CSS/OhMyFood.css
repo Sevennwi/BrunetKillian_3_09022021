@@ -6,6 +6,74 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+/* Spinner*/
+/* .lds-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    animation: disparition 2s step-end both;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: $second-color transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes disparition {
+    0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+  }                            */
+/* header, section, footer {
+    animation: apparition 2s step-end both;
+  }                            */
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* En tête */
 header {
   width: 100%;
@@ -63,24 +131,11 @@ header .reserver_button {
   z-index: 1;
 }
 
-header .reserver_button:hover::after {
-  opacity: 1;
-}
-
-header .reserver_button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 30px;
+header .reserver_button:hover {
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background: linear-gradient(#ff93e1, #a16be0);
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
 }
 
 /* Section */
@@ -204,7 +259,7 @@ section .cards {
 
 section .cards h2 {
   display: block;
-  width: 100%;
+  width: 80%;
   text-align: left;
   margin-left: 20%;
 }
@@ -234,6 +289,17 @@ section .cards_card {
   border-radius: 20px;
 }
 
+section .cards_card_nouveau {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 20px 250px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 @media all and (min-width: 1100px) {
   section .cards_card {
     margin: 40px 80px;
@@ -257,13 +323,14 @@ section .cards h3, section .cards p {
 
 section .cards span {
   position: relative;
-  left: 38%;
+  width: 15%;
+  left: 80%;
   bottom: 40px;
   font-size: 1.5em;
   color: grey;
 }
 
-section .cards span i:hover {
+section .cards span:hover {
   -webkit-animation: heart 1s both;
           animation: heart 1s both;
 }

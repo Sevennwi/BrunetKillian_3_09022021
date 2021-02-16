@@ -1,5 +1,68 @@
 @import "utils/variables";
 
+/* Spinner*/
+
+/* .lds-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    animation: disparition 2s step-end both;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: $second-color transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes disparition {
+    0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+  }                            */
+  
+  /* header, section, footer {
+    animation: apparition 2s step-end both;
+  }                            */
+
+
+  @keyframes apparition {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+  }
 
 /* En tête */
 
@@ -45,22 +108,8 @@ header {
             position: relative;
             z-index: 1;
             &:hover {
-                &::after {
-                    opacity: 1;
-                }
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                border-radius: 30px;
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
                 background: linear-gradient(lighten($third-color, 5), lighten($second-color, 5));
-                opacity: 0;
-                z-index: -1;
-                transition: opacity 250ms;
             }
         }
     }
@@ -148,7 +197,7 @@ section {
         
         h2 {
         display: block;
-        width: 100%;
+        width: 80%;
         text-align: left;
         margin-left: 20%; 
 
@@ -168,6 +217,17 @@ section {
             width: 350px;
             height: 285px;
             border-radius: 20px;
+
+            &_nouveau {
+                position: absolute;
+                background-color: $fourth-color;
+                color: darken($fourth-color, 40%);
+                font-weight: bold;
+                font-size: 1.1em;
+                margin: 20px 250px;
+                padding: 5px;
+                border-radius: 5px;
+            }
             @include ordi {
                 margin: 40px 80px;
             }
@@ -189,11 +249,12 @@ section {
 
         span {
             position: relative;
-            left: 38%;
+            width: 15%;
+            left: 80%;
             bottom: 40px;
             font-size: 1.5em;
             color: grey;
-            i:hover{
+            &:hover{
                 animation: heart 1s both;
             }
         }
