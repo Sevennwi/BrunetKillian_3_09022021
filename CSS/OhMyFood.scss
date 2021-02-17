@@ -112,6 +112,11 @@ header {
                 background: linear-gradient(lighten($third-color, 5), lighten($second-color, 5));
             }
         }
+
+        p {
+            color: rgb(63, 63, 63);
+            font-size: 1.1em;
+        }
     }
 }
 
@@ -122,7 +127,8 @@ section {
 
     h2 {
         text-align: left;
-        margin-left: 10%;
+        margin-left: 5%;
+        margin-top: 40px;
         @include ordi {
             text-align: center;
             margin: 20px 0px;
@@ -130,32 +136,46 @@ section {
     }
 
     ul {
-        list-style-type: none;
+        list-style-type: decimal;
         counter-reset: number;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 40px -20px;
 
         @include ordi {
             display: flex;
             justify-content: space-around;
             align-items: center;
+            flex-direction: row;
             margin: 20px 0px 40px;
         }
 
         li::before {
             counter-increment: number;
-            content: counter(number)"\a0";
+            content: counter(number);
             background-color: $second-color;
             border-radius: 50%;
-            margin-right: 20px;
-            width: 20px;
-            height: 20px;
+            position: absolute;
+            left: 4%;
+            width: 30px;
+            height: 30px;
             color: white;
             font-weight: normal;
+            line-height: 30px;  /* centrer de manière verticale, c'est pratique */
+
+            @include ordi {
+                position: relative;
+                left: -5%;
+            }
           }
 
         li {
             background-color: $primary-color;
-            margin: 20px 0px;
-            width: 95%;
+            margin: 15px 0px;
+            padding-left: 40px;
+            width: 85%;
             height: 60px;
             border-radius: 20px;
             display: flex;
@@ -166,6 +186,7 @@ section {
 
             @include ordi {
                 margin: 0px 20px;
+                padding-left: 10px;
             }
 
             &:hover {
@@ -199,7 +220,7 @@ section {
         display: block;
         width: 80%;
         text-align: left;
-        margin-left: 20%; 
+        margin-left: 0%; 
 
         @include ordi {
             text-align: center;
@@ -247,27 +268,66 @@ section {
             margin-bottom: -5px;
         }
 
-        span {
+        /*.fa-heart{
             position: relative;
             width: 15%;
-            left: 80%;
+            left: 40%;
             bottom: 40px;
             font-size: 1.5em;
             color: grey;
             &:hover{
-                animation: heart 1s both;
+                display: none;
+                animation: heart 1s infinite;
             }
-        }
+        }*/
     }
 }
+
+#hover-effect{
+    position: relative;
+    width: 15%;
+    left: 40%;
+    bottom: 40px;
+    font-size: 1.5em;
+    color: rgb(36, 36, 36);
+}
+
+#hover-effect:before{
+	content:"\f004";
+    font-weight: 200;
+}
+
+#hover-effect:hover:before{
+	content:"\f004";
+    font-weight: 900;
+    animation: heart 1s linear both;
+
+}
+
 
 
 @keyframes heart {
     0% {
-        color: grey;
+        color: ($second-color);
+        font-weight: 200;
     }
+
+    10% {
+        color: (lighten($second-color, 15%));
+        font-weight: 600;
+    }
+
+    30% {
+        color: (lighten($second-color, 10%));
+    }
+
+    60% {
+        color: (lighten($second-color, 5%));
+    }
+
     100% {
-        color: $second-color;
+       color: ($second-color);
+        font-weight: 900;
     }
 }
 

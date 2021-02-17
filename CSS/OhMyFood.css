@@ -138,6 +138,11 @@ header .reserver_button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
 }
 
+header .reserver p {
+  color: #3f3f3f;
+  font-size: 1.1em;
+}
+
 /* Section */
 section {
   text-align: center;
@@ -145,7 +150,8 @@ section {
 
 section h2 {
   text-align: left;
-  margin-left: 10%;
+  margin-left: 5%;
+  margin-top: 40px;
 }
 
 @media all and (min-width: 1100px) {
@@ -156,8 +162,22 @@ section h2 {
 }
 
 section ul {
-  list-style-type: none;
+  list-style-type: decimal;
   counter-reset: number;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 40px -20px;
 }
 
 @media all and (min-width: 1100px) {
@@ -170,26 +190,41 @@ section ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: 20px 0px 40px;
   }
 }
 
 section ul li::before {
   counter-increment: number;
-  content: counter(number) " ";
+  content: counter(number);
   background-color: #9356DC;
   border-radius: 50%;
-  margin-right: 20px;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  left: 4%;
+  width: 30px;
+  height: 30px;
   color: white;
   font-weight: normal;
+  line-height: 30px;
+  /* centrer de manière verticale, c'est pratique */
+}
+
+@media all and (min-width: 1100px) {
+  section ul li::before {
+    position: relative;
+    left: -5%;
+  }
 }
 
 section ul li {
   background-color: #f2f2f2;
-  margin: 20px 0px;
-  width: 95%;
+  margin: 15px 0px;
+  padding-left: 40px;
+  width: 85%;
   height: 60px;
   border-radius: 20px;
   display: -webkit-box;
@@ -209,6 +244,7 @@ section ul li {
 @media all and (min-width: 1100px) {
   section ul li {
     margin: 0px 20px;
+    padding-left: 10px;
   }
 }
 
@@ -238,6 +274,18 @@ section .cards {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 50px;
+  /*.fa-heart{
+            position: relative;
+            width: 15%;
+            left: 40%;
+            bottom: 40px;
+            font-size: 1.5em;
+            color: grey;
+            &:hover{
+                display: none;
+                animation: heart 1s infinite;
+            }
+        }*/
 }
 
 @media all and (min-width: 1100px) {
@@ -261,7 +309,7 @@ section .cards h2 {
   display: block;
   width: 80%;
   text-align: left;
-  margin-left: 20%;
+  margin-left: 0%;
 }
 
 @media all and (min-width: 1100px) {
@@ -321,35 +369,66 @@ section .cards h3, section .cards p {
   margin-bottom: -5px;
 }
 
-section .cards span {
+#hover-effect {
   position: relative;
   width: 15%;
-  left: 80%;
+  left: 40%;
   bottom: 40px;
   font-size: 1.5em;
-  color: grey;
+  color: #242424;
 }
 
-section .cards span:hover {
-  -webkit-animation: heart 1s both;
-          animation: heart 1s both;
+#hover-effect:before {
+  content: "\f004";
+  font-weight: 200;
+}
+
+#hover-effect:hover:before {
+  content: "\f004";
+  font-weight: 900;
+  -webkit-animation: heart 1s linear both;
+          animation: heart 1s linear both;
 }
 
 @-webkit-keyframes heart {
   0% {
-    color: grey;
+    color: #9356DC;
+    font-weight: 200;
+  }
+  10% {
+    color: #bc95e9;
+    font-weight: 600;
+  }
+  30% {
+    color: #ae80e5;
+  }
+  60% {
+    color: #a16be0;
   }
   100% {
     color: #9356DC;
+    font-weight: 900;
   }
 }
 
 @keyframes heart {
   0% {
-    color: grey;
+    color: #9356DC;
+    font-weight: 200;
+  }
+  10% {
+    color: #bc95e9;
+    font-weight: 600;
+  }
+  30% {
+    color: #ae80e5;
+  }
+  60% {
+    color: #a16be0;
   }
   100% {
     color: #9356DC;
+    font-weight: 900;
   }
 }
 
