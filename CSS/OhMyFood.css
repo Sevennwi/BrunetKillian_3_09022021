@@ -386,8 +386,8 @@ section .cards h3, section .cards p {
 #hover-effect:hover:before {
   content: "\f004";
   font-weight: 900;
-  -webkit-animation: heart 1s linear both;
-          animation: heart 1s linear both;
+  -webkit-animation: heart 1.5s linear both;
+          animation: heart 1.5s linear both;
 }
 
 @-webkit-keyframes heart {

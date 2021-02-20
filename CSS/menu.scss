@@ -81,7 +81,7 @@ section {
         &_card {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: left;
             justify-content: left;
             width: 90%;
             height: 90px;
@@ -116,41 +116,49 @@ section {
 
             &_prix {
                 display: flex;
+                flex-direction: row;
                 margin-top: -20px;
-                justify-content: space-between;
-                width: 170%;
+                overflow: hidden;
+
+                &:hover + .cards_card_icon {
+                    transform: scaleX(1);
+                }
+
 
                 &_p {
                     font-weight: bold;
+                    padding-left: 90px;
                 }
             }
 
             &_icon {
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 color: white;
                 background-color: $fourth-color;
                 border-radius: 0px 20px 20px 0px;
-                margin: 0px -20px 0px -20px;
+                margin: 0px 0px 0px 0px;
                 font-size: 1.2em;
-                width: 100px;
+                position: relative;
+                left: 308px;
+                bottom: 93px;
+                width: 70px;
                 height: 90px;
+                overflow: hidden;
+                transform: scaleX(0);
+                transition: transform 500ms;
+                transform-origin: right;
 
-                &_span {
-                    display: block;
-                    position: relative;
-                    top: 85%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                &:hover {
+                    transform: scaleX(1);
                 }
-            &:hover {
-                transform-origin: 50% 0%;
-                background-color: $fourth-color;
-                animation: check-anim 400ms both;
-                animation-timing-function: ease-in-out;
-            }
-            }
 
 
+            }
+                &:hover span{
+                    animation: spin 600ms linear;
+                }
         }
 
         &_button {
@@ -181,14 +189,11 @@ section {
     }
 }
 
-@keyframes check-anim {
-    0% {
-    	transform: translateX(0);
-    }
-    100% {
-        transform: translateX(30px);
-    }
-}
 
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
 
 @import "layouts/form";

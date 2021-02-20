@@ -104,9 +104,9 @@ section .cards_card {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -198,47 +198,63 @@ section .cards_card_prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: -20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 170%;
+  overflow: hidden;
+}
+
+section .cards_card_prix:hover + .cards_card_icon {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 section .cards_card_prix_p {
   font-weight: bold;
+  padding-left: 90px;
 }
 
 section .cards_card_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   background-color: #99E2D0;
   border-radius: 0px 20px 20px 0px;
-  margin: 0px -20px 0px -20px;
+  margin: 0px 0px 0px 0px;
   font-size: 1.2em;
-  width: 100px;
-  height: 90px;
-}
-
-section .cards_card_icon_span {
-  display: block;
   position: relative;
-  top: 85%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 308px;
+  bottom: 93px;
+  width: 70px;
+  height: 90px;
+  overflow: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 section .cards_card_icon:hover {
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  background-color: #99E2D0;
-  -webkit-animation: check-anim 400ms both;
-          animation: check-anim 400ms both;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+section .cards_card:hover span {
+  -webkit-animation: spin 600ms linear;
+          animation: spin 600ms linear;
 }
 
 section .cards_button {
@@ -287,25 +303,17 @@ section .cards_button:hover {
   }
 }
 
-@-webkit-keyframes check-anim {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+@-webkit-keyframes spin {
   100% {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes check-anim {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+@keyframes spin {
   100% {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
