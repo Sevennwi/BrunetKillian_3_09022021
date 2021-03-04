@@ -104,21 +104,29 @@ section .cards_card {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 90%;
   height: 90px;
   background-color: white;
   border-radius: 20px;
   margin: 10px 0px;
+  overflow: hidden;
   -webkit-animation: menu-anim 400ms both;
           animation: menu-anim 400ms both;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+}
+
+section .cards_card:hover > .cards_card_icon {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+section .cards_card:hover span {
+  -webkit-animation: spin 600ms linear;
+          animation: spin 600ms linear;
 }
 
 section .cards_card:nth-child(3) {
@@ -183,9 +191,9 @@ section .cards_card:nth-child(14) {
 
 @media all and (min-width: 1100px) {
   section .cards_card {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 30%;
   }
 }
@@ -194,26 +202,31 @@ section .cards_card h4, section .cards_card p {
   margin-left: 20px;
 }
 
+section .cards_card_text {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 380px;
+  width: 300px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+section .cards_card_text :first-child {
+  margin-bottom: -2px;
+}
+
 section .cards_card_prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: -20px;
-  overflow: hidden;
-}
-
-section .cards_card_prix:hover + .cards_card_icon {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-section .cards_card_prix_p {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   font-weight: bold;
-  padding-left: 90px;
 }
 
 section .cards_card_icon {
@@ -229,14 +242,8 @@ section .cards_card_icon {
   color: white;
   background-color: #99E2D0;
   border-radius: 0px 20px 20px 0px;
-  margin: 0px 0px 0px 0px;
-  font-size: 1.2em;
-  position: relative;
-  left: 308px;
-  bottom: 93px;
-  width: 70px;
+  min-width: 70px;
   height: 90px;
-  overflow: hidden;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 500ms;
@@ -245,16 +252,6 @@ section .cards_card_icon {
   transition: transform 500ms, -webkit-transform 500ms;
   -webkit-transform-origin: right;
           transform-origin: right;
-}
-
-section .cards_card_icon:hover {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
-section .cards_card:hover span {
-  -webkit-animation: spin 600ms linear;
-          animation: spin 600ms linear;
 }
 
 section .cards_button {

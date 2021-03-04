@@ -81,15 +81,25 @@ section {
         &_card {
             display: flex;
             flex-direction: row;
-            align-items: left;
-            justify-content: left;
+            justify-content: space-between;
             width: 90%;
             height: 90px;
             background-color: white;
             border-radius: 20px;
             margin: 10px 0px;
+            overflow: hidden;
             animation: menu-anim 400ms both;
             animation-timing-function: ease-in-out;
+
+
+            &:hover > .cards_card_icon {
+                transform: scaleX(1);
+            }
+
+            &:hover span{
+                animation: spin 600ms linear;
+            }
+
 
             &:nth-child(3) { animation-delay: 0.6s }
             &:nth-child(4) { animation-delay: 0.8s }
@@ -106,7 +116,7 @@ section {
 
 
             @include ordi {
-                justify-content: center;
+                justify-content: space-between;
                 width: 30%;
             }
             
@@ -114,22 +124,28 @@ section {
                 margin-left: 20px;
             }
 
-            &_prix {
-                display: flex;
-                flex-direction: row;
-                margin-top: -20px;
+            &_text {
+                display: block;
+                flex-direction: column;
+                max-height: 380px;
+                width: 300px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 overflow: hidden;
+                
 
-                &:hover + .cards_card_icon {
-                    transform: scaleX(1);
-                }
-
-
-                &_p {
-                    font-weight: bold;
-                    padding-left: 90px;
+                :first-child{
+                    margin-bottom: -2px;
                 }
             }
+
+            &_prix {
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+            }
+
+            
 
             &_icon {
                 display: flex;
@@ -138,27 +154,15 @@ section {
                 color: white;
                 background-color: $fourth-color;
                 border-radius: 0px 20px 20px 0px;
-                margin: 0px 0px 0px 0px;
-                font-size: 1.2em;
-                position: relative;
-                left: 308px;
-                bottom: 93px;
-                width: 70px;
+                min-width: 70px;
                 height: 90px;
-                overflow: hidden;
                 transform: scaleX(0);
                 transition: transform 500ms;
                 transform-origin: right;
 
-                &:hover {
-                    transform: scaleX(1);
-                }
-
 
             }
-                &:hover span{
-                    animation: spin 600ms linear;
-                }
+
         }
 
         &_button {
