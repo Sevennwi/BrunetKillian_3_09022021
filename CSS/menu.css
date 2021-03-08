@@ -58,6 +58,17 @@ section .cards {
   z-index: 2;
 }
 
+@media all and (min-width: 1100px) {
+  section .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 section .cards h2 {
   font-family: Shrikhand, Arial, Helvetica, sans-serif;
 }
@@ -68,9 +79,9 @@ section .cards h2 span {
 
 section .cards h3 {
   display: block;
-  width: 100%;
+  width: 80%;
   text-align: left;
-  margin-left: 50px;
+  margin-left: -30px;
   text-transform: uppercase;
   font-weight: normal;
 }
@@ -127,6 +138,10 @@ section .cards_card:hover > .cards_card_icon {
 section .cards_card:hover span {
   -webkit-animation: spin 600ms linear;
           animation: spin 600ms linear;
+}
+
+section .cards_card:hover .cards_card_text_description {
+  width: 230px;
 }
 
 section .cards_card:nth-child(3) {
@@ -198,21 +213,23 @@ section .cards_card:nth-child(14) {
   }
 }
 
-section .cards_card h4, section .cards_card p {
-  margin-left: 20px;
-}
-
 section .cards_card_text {
+  margin-left: 20px;
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 380px;
-  width: 300px;
+}
+
+section .cards_card_text_description {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-height: 380px;
+  width: 300px;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
 }
 
 section .cards_card_text :first-child {
@@ -227,6 +244,8 @@ section .cards_card_prix {
       -ms-flex-align: end;
           align-items: flex-end;
   font-weight: bold;
+  position: relative;
+  left: 10px;
 }
 
 section .cards_card_icon {

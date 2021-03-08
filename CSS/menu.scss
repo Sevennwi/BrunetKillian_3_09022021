@@ -44,6 +44,11 @@ section {
         position: relative;
         z-index: 2;
 
+        @include ordi {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
         h2 {
             @include Police;
             
@@ -54,9 +59,9 @@ section {
 
         h3 {
             display: block;
-            width: 100%;
+            width: 80%;
             text-align: left;
-            margin-left: 50px;
+            margin-left: -30px;
             text-transform: uppercase;
             font-weight: normal;
 
@@ -100,6 +105,9 @@ section {
                 animation: spin 600ms linear;
             }
 
+            &:hover .cards_card_text_description {
+                width: 230px;
+            }
 
             &:nth-child(3) { animation-delay: 0.6s }
             &:nth-child(4) { animation-delay: 0.8s }
@@ -120,20 +128,20 @@ section {
                 width: 30%;
             }
             
-            h4, p {
-                margin-left: 20px;
-            }
 
             &_text {
+                margin-left: 20px;
                 display: block;
                 flex-direction: column;
-                max-height: 380px;
-                width: 300px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                
-
+                &_description {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-height: 380px;
+                    width: 300px;
+                    transition: width 500ms;
+                }
+    
                 :first-child{
                     margin-bottom: -2px;
                 }
@@ -143,9 +151,9 @@ section {
                 display: flex;
                 align-items: flex-end;
                 font-weight: bold;
+                position: relative;
+                left: 10px;
             }
-
-            
 
             &_icon {
                 display: flex;
@@ -159,8 +167,6 @@ section {
                 transform: scaleX(0);
                 transition: transform 500ms;
                 transform-origin: right;
-
-
             }
 
         }
