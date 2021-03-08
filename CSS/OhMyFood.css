@@ -374,48 +374,80 @@ section .cards h3, section .cards p {
 #hover-effect:hover:before {
   content: "\f004";
   font-weight: 900;
-  -webkit-animation: heart 1.5s linear both;
-          animation: heart 1.5s linear both;
+  -webkit-animation: heart 2.5s linear both;
+          animation: heart 2.5s linear both;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @-webkit-keyframes heart {
   0% {
-    color: #9356DC;
+    color: #242424;
     font-weight: 200;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   10% {
-    color: #bc95e9;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 15%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 15%;
     font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   30% {
-    color: #ae80e5;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 10%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 10%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   60% {
-    color: #a16be0;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 5%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 5%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   100% {
-    color: #9356DC;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
   }
 }
 
 @keyframes heart {
   0% {
-    color: #9356DC;
+    color: #242424;
     font-weight: 200;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   10% {
-    color: #bc95e9;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 15%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 15%;
     font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   30% {
-    color: #ae80e5;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 10%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 10%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   60% {
-    color: #a16be0;
+    background: lighten -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC)), 5%;
+    background: lighten linear-gradient(#FF79DA, #9356DC), 5%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   100% {
-    color: #9356DC;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
   }
 }

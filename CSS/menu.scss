@@ -102,7 +102,7 @@ section {
             }
 
             &:hover span{
-                animation: spin 600ms linear;
+                animation: spin 500ms linear;
             }
 
             &:hover .cards_card_text_description {
@@ -201,6 +201,10 @@ section {
 
 
 @keyframes spin { 
+    0% {
+        transform: rotate(180deg); 
+    }
+
     100% { 
         transform: rotate(360deg); 
     } 

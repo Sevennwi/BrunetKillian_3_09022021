@@ -136,8 +136,8 @@ section .cards_card:hover > .cards_card_icon {
 }
 
 section .cards_card:hover span {
-  -webkit-animation: spin 600ms linear;
-          animation: spin 600ms linear;
+  -webkit-animation: spin 500ms linear;
+          animation: spin 500ms linear;
 }
 
 section .cards_card:hover .cards_card_text_description {
@@ -320,6 +320,10 @@ section .cards_button:hover {
 }
 
 @-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -327,6 +331,10 @@ section .cards_button:hover {
 }
 
 @keyframes spin {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
