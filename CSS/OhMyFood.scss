@@ -2,7 +2,7 @@
 
 /* Spinner*/
 
-/* .lds-ring {
+ .lds-ring {
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -48,11 +48,11 @@
       100% {
         opacity: 0;
       }
-  }                            */
+  }                            
   
-  /* header, section, footer {
+   header, section, footer {
     animation: apparition 2s step-end both;
-  }                            */
+  }                            
 
 
   @keyframes apparition {
@@ -288,48 +288,28 @@ section {
 #hover-effect:hover:before{
 	content:"\f004";
     font-weight: 900;
-    animation: heart 2.5s linear both;
+    animation: heart 0.5s ease-in both;
     background: linear-gradient($third-color, $second-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-
 @keyframes heart {
     0% {
-        color: rgb(36, 36, 36);
-        font-weight: 200;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    10% {
-        background: (lighten (linear-gradient($third-color, $second-color), 15%));
-        font-weight: 600;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    30% {
-        background: (lighten (linear-gradient($third-color, $second-color), 10%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    60% {
-        background: (lighten (linear-gradient($third-color, $second-color), 5%));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        opacity: 0.3;
     }
 
     100% {
+        opacity: 1;
         background: linear-gradient($third-color, $second-color);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 900;
     }
 }
+
+
 
 /* media queries */
 
