@@ -271,7 +271,7 @@ section {
     }
 }
 
-#hover-effect{
+.hover-effect{
     position: relative;
     width: 15%;
     left: 40%;
@@ -280,12 +280,12 @@ section {
     color: rgb(36, 36, 36);
 }
 
-#hover-effect:before{
+.hover-effect:before{
 	content:"\f004";
     font-weight: 200;
 }
 
-#hover-effect:hover:before{
+.hover-effect:hover:before{
 	content:"\f004";
     font-weight: 900;
     animation: heart 0.5s ease-in both;
