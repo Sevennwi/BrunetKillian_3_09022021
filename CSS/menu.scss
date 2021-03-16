@@ -1,7 +1,7 @@
 @import "utils/variables";
 
 h1 {
-    @include Police;
+    @include police;
     text-align: center;
     height: 30px;
     
@@ -57,7 +57,7 @@ section {
         }
 
         h2 {
-            @include Police;
+            @include police;
             
             span {
                 margin-left: 90px;
@@ -90,7 +90,7 @@ section {
             width   : 12%;
             border-bottom: 4px solid $fourth-color;
 
-            @include ordi {
+            @include ordiMenu {
                 left: 44%;
             }
           }
