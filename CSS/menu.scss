@@ -60,7 +60,7 @@ section {
             @include Police;
             
             span {
-                margin-left: 40px;
+                margin-left: 90px;
             }
         }
 
@@ -119,8 +119,32 @@ section {
 
             &:hover .cards_card_text_description {
                 width: 230px;
+
+                @include ordiXL {
+                    width: 450px;
+                }
+
+                @include ordiL {
+                    width: 350px;
+                }
+                
                 @include ordi {
                     width: 280px;
+                }
+
+                @include mobileX {
+                    width: 200px;
+                }
+            }
+
+            &:hover h4 {
+                width: 230px;
+                @include ordi {
+                    width: 280px;
+                }
+
+                @include mobileX {
+                    width: 200px;
                 }
             }
 
@@ -147,13 +171,15 @@ section {
                 justify-content: space-between;
                 width: 70%;
             }
+
             
 
             &_text {
                 margin-left: 20px;
                 display: block;
                 flex-direction: column;
-                &_description {
+
+                h4 {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -163,6 +189,34 @@ section {
 
                     @include ordi {
                         width: 350px;
+                    }
+
+                    @include mobileX {
+                        width: 250px;
+                    }
+                }
+                &_description {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-height: 380px;
+                    width: 300px;
+                    transition: width 500ms;
+
+                    @include ordiXL {
+                        width: 580px;
+                    }
+    
+                    @include ordiL {
+                        width: 500px;
+                    }
+
+                    @include ordi {
+                        width: 350px;
+                    }
+
+                    @include mobileX {
+                        width: 250px;
                     }
                 }
     
@@ -178,8 +232,24 @@ section {
                 position: relative;
                 left: 10px;
 
+                @include ordiXL {
+                    left: 17%;
+                }
+
+                @include ordiL {
+                    left: 15%;
+                }
+
                 @include ordi {
-                    left: 100px;
+                    left: 17%;
+                }
+
+                @include laptop {
+                    left: 70px;
+                }
+
+                @include mobileX {
+                    left: 5px;
                 }
 
             }
@@ -215,6 +285,13 @@ section {
             }
         }
     }
+}
+
+
+.hover-effect{
+    display: inline;
+    font-size: 1em;
+    color: rgb(36, 36, 36);
 }
 
 @keyframes menu-anim {

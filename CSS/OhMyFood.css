@@ -191,7 +191,7 @@ section h2 {
   margin-top: 40px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section h2 {
     text-align: center;
     margin: 20px 0px;
@@ -217,7 +217,7 @@ section ul {
   margin: 0px 0px 40px -20px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -250,7 +250,7 @@ section ul li::before {
   /* centrer de manière verticale, c'est pratique */
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section ul li::before {
     position: relative;
     left: -5%;
@@ -278,7 +278,7 @@ section ul li {
           box-shadow: -3px 3px 5px lightgray;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section ul li {
     margin: 0px 20px;
     padding-left: 10px;
@@ -313,7 +313,7 @@ section .cards {
   padding-bottom: 50px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -337,7 +337,7 @@ section .cards h2 {
   margin-left: 0%;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards h2 {
     text-align: center;
     margin: 20px 0px 0px;
@@ -373,7 +373,7 @@ section .cards_card_nouveau {
   border-radius: 5px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards_card {
     margin: 40px 80px;
   }
@@ -403,50 +403,6 @@ section .cards h3, section .cards p {
   color: #242424;
 }
 
-.hover-effect:before {
-  content: "\f004";
-  font-weight: 200;
-}
-
-.hover-effect:hover:before {
-  content: "\f004";
-  font-weight: 900;
-  -webkit-animation: heart 0.5s ease-in both;
-          animation: heart 0.5s ease-in both;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-  }
-}
-
 /* media queries */
 /* footer */
 footer {
@@ -455,7 +411,7 @@ footer {
   padding: 1px 0px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -500,7 +456,7 @@ footer h2 {
   font-family: Shrikhand, Arial, Helvetica, sans-serif;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer h2 {
     margin: 0;
   }
@@ -517,7 +473,7 @@ footer p {
   margin-left: 10%;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer p {
     margin: 10px 0px;
   }
@@ -537,5 +493,50 @@ footer p span #rotate {
   -webkit-transform: rotate(-40deg);
           transform: rotate(-40deg);
   width: 13.5px;
+}
+
+/* Animation coeur*/
+.hover-effect:before {
+  content: "\f004";
+  font-weight: 200;
+}
+
+.hover-effect:hover:before {
+  content: "\f004";
+  font-weight: 900;
+  -webkit-animation: heart 0.5s ease-in both;
+          animation: heart 0.5s ease-in both;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
 }
 /*# sourceMappingURL=OhMyFood.css.map */

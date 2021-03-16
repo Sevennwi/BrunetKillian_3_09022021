@@ -58,7 +58,7 @@ section .cards {
   z-index: 2;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards {
     width: 60%;
     -webkit-transform: translateX(33%);
@@ -79,7 +79,7 @@ section .cards h2 {
 }
 
 section .cards h2 span {
-  margin-left: 40px;
+  margin-left: 90px;
 }
 
 section .cards h3 {
@@ -91,7 +91,7 @@ section .cards h3 {
   font-weight: normal;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards h3 {
     text-align: center;
     margin: 20px 0px;
@@ -113,7 +113,7 @@ section .cards h3:before {
   border-bottom: 4px solid #99E2D0;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards h3:before {
     left: 44%;
   }
@@ -156,9 +156,43 @@ section .cards_card:hover .cards_card_text_description {
   width: 230px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1751px) {
+  section .cards_card:hover .cards_card_text_description {
+    width: 450px;
+  }
+}
+
+@media all and (min-width: 1501px) and (max-width: 1750px) {
+  section .cards_card:hover .cards_card_text_description {
+    width: 350px;
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards_card:hover .cards_card_text_description {
     width: 280px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section .cards_card:hover .cards_card_text_description {
+    width: 200px;
+  }
+}
+
+section .cards_card:hover h4 {
+  width: 230px;
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
+  section .cards_card:hover h4 {
+    width: 280px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section .cards_card:hover h4 {
+    width: 200px;
   }
 }
 
@@ -222,7 +256,7 @@ section .cards_card:nth-child(14) {
           animation-delay: 2.8s;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards_card {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -249,6 +283,28 @@ section .cards_card_text {
           flex-direction: column;
 }
 
+section .cards_card_text h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 380px;
+  width: 300px;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
+  section .cards_card_text h4 {
+    width: 350px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section .cards_card_text h4 {
+    width: 250px;
+  }
+}
+
 section .cards_card_text_description {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -259,9 +315,27 @@ section .cards_card_text_description {
   transition: width 500ms;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1751px) {
+  section .cards_card_text_description {
+    width: 580px;
+  }
+}
+
+@media all and (min-width: 1501px) and (max-width: 1750px) {
+  section .cards_card_text_description {
+    width: 500px;
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   section .cards_card_text_description {
     width: 350px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section .cards_card_text_description {
+    width: 250px;
   }
 }
 
@@ -281,9 +355,33 @@ section .cards_card_prix {
   left: 10px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1751px) {
   section .cards_card_prix {
-    left: 100px;
+    left: 17%;
+  }
+}
+
+@media all and (min-width: 1501px) and (max-width: 1750px) {
+  section .cards_card_prix {
+    left: 15%;
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
+  section .cards_card_prix {
+    left: 17%;
+  }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1200px) {
+  section .cards_card_prix {
+    left: 70px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  section .cards_card_prix {
+    left: 5px;
   }
 }
 
@@ -330,6 +428,12 @@ section .cards_button:hover {
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background: linear-gradient(#ff93e1, #a16be0);
+}
+
+.hover-effect {
+  display: inline;
+  font-size: 1em;
+  color: #242424;
 }
 
 @-webkit-keyframes menu-anim {
@@ -387,7 +491,7 @@ footer {
   padding: 1px 0px;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -432,7 +536,7 @@ footer h2 {
   font-family: Shrikhand, Arial, Helvetica, sans-serif;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer h2 {
     margin: 0;
   }
@@ -449,7 +553,7 @@ footer p {
   margin-left: 10%;
 }
 
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1201px) and (max-width: 1500px) {
   footer p {
     margin: 10px 0px;
   }
@@ -469,5 +573,50 @@ footer p span #rotate {
   -webkit-transform: rotate(-40deg);
           transform: rotate(-40deg);
   width: 13.5px;
+}
+
+/* Animation coeur*/
+.hover-effect:before {
+  content: "\f004";
+  font-weight: 200;
+}
+
+.hover-effect:hover:before {
+  content: "\f004";
+  font-weight: 900;
+  -webkit-animation: heart 0.5s ease-in both;
+          animation: heart 0.5s ease-in both;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
